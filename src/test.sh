@@ -1,9 +1,10 @@
- #!/bin/bash
+#!/bin/bash
 
 #src/test.sh
 EXPECTED="Hello, Test!"
 
-OUTPUT=$(node -e "console.log(require('./src/app.js'))")
+OUTPUT=$(node -e "console.log(require('./src/app.js')('Test'))")
+
 if [ "$OUTPUT" == "$EXPECTED" ]; then
 
 echo "✅ Test passed!"
